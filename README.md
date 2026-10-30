@@ -1,22 +1,21 @@
 # Karim El Askary — Engineering Portfolio
 
-A bilingual (English/French), responsive static portfolio for GitHub Pages.
+A bilingual (English/French), responsive static portfolio deployed with GitHub Pages.
 
-## Publish
+## Live website
 
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment → Source**, select **GitHub Actions**.
-3. The workflow in `.github/workflows/deploy.yml` will deploy the site after the next push to `main` (or via Actions → Deploy portfolio to GitHub Pages → Run workflow).
+https://karimelaskary2006-crypto.github.io/E-portfolio-/
 
-Expected site URL: https://karimelaskary2006-crypto.github.io/E-portfolio-/
+## Portfolio assets
 
-## Add the supplied documents
+The homepage uses the following files already stored in `assets/`:
 
-Place these files in the `assets/` directory using these exact names:
+- `pfp linkedin.jpg` — portrait
+- `CV final anglais.pdf` — English CV
+- `CV final francais.pdf` — French CV
+- `TIPEkarimelaskary.pdf` — TIPE research project
+- `Elevation video karim .mov` — supplied video
 
-- `karim-portrait.jpg`
-- `CV-Karim-El-Askary-EN.pdf`
-- `CV-Karim-El-Askary-FR.pdf`
-- `TIPE-Karim-El-Askary.pdf`
+## Deployment
 
-The homepage already links to those paths. The large presentation video is not included in the repository; compress it for web delivery before publishing it.
+The GitHub Actions workflow in `.github/workflows/deploy.yml` publishes the repository on pushes to `main`. In repository **Settings → Pages**, set **Build and deployment → Source** to **GitHub Actions**.
