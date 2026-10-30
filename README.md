@@ -8,15 +8,15 @@ https://karimelaskary2006-crypto.github.io/E-portfolio-/
 
 ## Portfolio assets
 
-The homepage expects the following files in `assets/`:
+The homepage uses the following files in `assets/`:
 
 - `pfp linkedin.jpg` — portrait
-- `CV-Karim-El-Askary-EN.pdf` — English CV (LinkedIn link is clickable)
-- `CV-Karim-El-Askary-FR.pdf` — French translation of the English CV (same one-page, two-column structure; LinkedIn link is clickable)
+- `CV final anglais.pdf` — updated English CV with clickable LinkedIn link
+- `CV final francais.pdf` — French translation of the English CV, preserving the same one-page, two-column structure and clickable LinkedIn link
 - `TIPEkarimelaskary.pdf` — TIPE research project
 - `Elevation video karim .mov` — supplied video
 
-The two updated CV PDFs need to be uploaded to `assets/` with the exact filenames above. Once uploaded, the existing GitHub Pages workflow will deploy them automatically.
+To publish the updated CVs, replace the two existing CV PDFs in `assets/` with the updated files using these exact names. The GitHub Pages workflow deploys on every push to `main`.
 
 ## Deployment
 
