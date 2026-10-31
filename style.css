@@ -92,15 +92,47 @@ body{font-size:16px}
 }
 
 
-/* Personal video presentation */
-.presentation-section{padding:90px 0 125px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.presentation-section>.section-kicker{margin-bottom:48px}
-.presentation-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:7%;align-items:center}
-.presentation-copy h2{font-size:clamp(48px,5.7vw,76px);letter-spacing:-3px;line-height:1.06;font-weight:500;margin:20px 0}
-.presentation-copy p{max-width:390px;color:#b6c2d0;font-size:15px;line-height:1.9}
-.presentation-open{display:inline-block;margin-top:18px;color:var(--accent2);font:11px var(--mono);border-bottom:1px solid rgba(238,137,91,.45);padding-bottom:7px}
-.presentation-player{border:1px solid var(--line);background:#101d30;padding:12px;box-shadow:0 22px 55px rgba(0,0,0,.2)}
-.presentation-player video{display:block;width:100%;max-height:560px;aspect-ratio:16/9;object-fit:contain;background:#060b12}
-.player-caption{display:flex;justify-content:space-between;padding:13px 5px 3px;color:#91a1b4;font:9px var(--mono);letter-spacing:1.3px}
-@media(max-width:900px){.presentation-layout{grid-template-columns:.8fr 1.2fr;gap:4%}.presentation-copy h2{font-size:52px}}
-@media(max-width:650px){.presentation-section{padding:75px 0 85px}.presentation-section>.section-kicker{margin-bottom:35px}.presentation-layout{grid-template-columns:1fr;gap:27px}.presentation-copy h2{font-size:53px}.presentation-copy p{font-size:13px}.presentation-player{padding:8px}.presentation-player video{aspect-ratio:16/9}.player-caption{font-size:8px}}
+
+/* Rebalanced video presentation: centered framed two-column composition */
+.presentation-section{width:100%;max-width:none;padding:92px max(6vw,24px) 112px;border:0}
+.presentation-section>.section-kicker{width:min(1080px,100%);margin:0 auto 25px}
+.presentation-layout{
+  width:min(1080px,100%);
+  min-height:405px;
+  margin:0 auto;
+  padding:clamp(30px,4vw,58px);
+  display:grid;
+  grid-template-columns:minmax(250px,.82fr) minmax(0,1.18fr);
+  gap:clamp(28px,5vw,66px);
+  align-items:center;
+  border:1px solid rgba(176,194,215,.35);
+  background:linear-gradient(115deg,rgba(24,42,64,.88),rgba(13,25,42,.88));
+  box-shadow:0 28px 70px rgba(0,0,0,.18);
+}
+.presentation-copy{max-width:390px;justify-self:center;width:100%;padding:4px 0}
+.presentation-copy .mini-label{display:inline-block;color:var(--accent2);font-size:10px;letter-spacing:1.7px}
+.presentation-copy h2{font-family:Georgia,serif;font-size:clamp(42px,4.6vw,60px);letter-spacing:-2.6px;line-height:1.08;font-weight:400;margin:23px 0 13px}
+.presentation-copy h2 em{font-style:italic;color:var(--accent2)}
+.presentation-copy .presentation-subline{font-size:13px;line-height:1.6;color:#e2e6eb;margin:0 0 17px;font-weight:600}
+.presentation-copy p:not(.presentation-subline){max-width:360px;color:#bdc8d5;font-size:14px;line-height:1.85;margin:0}
+.presentation-open{display:inline-block;margin-top:25px;color:var(--accent2);font:10px var(--mono);letter-spacing:.3px;border-bottom:1px solid rgba(238,137,91,.55);padding-bottom:7px}
+.presentation-player{width:100%;min-width:0;justify-self:center;border:1px solid rgba(220,230,241,.28);background:#070d17;padding:10px;box-shadow:0 16px 38px rgba(0,0,0,.32)}
+.presentation-player video{display:block;width:100%;height:auto;max-height:450px;aspect-ratio:16/9;object-fit:contain;background:#05080d}
+.player-caption{display:flex;justify-content:space-between;padding:12px 3px 2px;color:#9cacbf;font:9px var(--mono);letter-spacing:1.3px}
+@media(max-width:850px){
+ .presentation-section{padding:75px max(5vw,20px) 90px}
+ .presentation-layout{grid-template-columns:.85fr 1.15fr;gap:26px;padding:30px}
+ .presentation-copy h2{font-size:clamp(37px,5vw,50px)}
+}
+@media(max-width:650px){
+ .presentation-section{padding:65px 6vw 78px}
+ .presentation-section>.section-kicker{margin-bottom:20px}
+ .presentation-layout{grid-template-columns:1fr;gap:25px;padding:25px 20px;min-height:0}
+ .presentation-copy{max-width:none;justify-self:stretch}
+ .presentation-copy h2{font-size:48px;margin:16px 0 10px}
+ .presentation-copy .presentation-subline{font-size:12px}
+ .presentation-copy p:not(.presentation-subline){font-size:13px}
+ .presentation-player{padding:7px}
+ .presentation-player video{aspect-ratio:16/9;max-height:none}
+ .player-caption{font-size:8px}
+}
