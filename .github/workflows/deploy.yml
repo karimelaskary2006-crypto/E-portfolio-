@@ -23,6 +23,11 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Convert introduction video for browser playback
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          ffmpeg -y -i "assets/Elevation video karim .mov" -c:v libx264 -preset veryfast -crf 24 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart "assets/presentation.mp4"
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload website files
